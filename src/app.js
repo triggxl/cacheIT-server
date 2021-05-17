@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { NODE_ENV } = require('./config')
 
+// Invoke express to create the application
 const app = express();
 
 const morganOption = (NODE_ENV === 'production')
@@ -16,6 +17,7 @@ app.use(helmet());
 
 // adding basic endpoint to our app.js
 app.get('/', (req, res) => {
+  // send some text to the client
   res.send('Hello, world!')
 })
 
@@ -30,6 +32,7 @@ app.use(function errorHandler(error, req, res, next) {
   }
   res.status(500).json(response)
 })
+
 app.use(cors());
 
 module.exports = app;
