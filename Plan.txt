@@ -23,6 +23,27 @@ created simple migration and seed file-
     Database: <database-name>
     PORT: 5432
 
+•set up db on heroku
+  heroku create
+  update config, postgrator-config, server, and .env files to use DATABASE_URL
+  Deploy to heroku:
+    git push heroku master
+  Provision Postgresql and create free plan:
+    heroku addons:create heroku-postgresql:hobby-dev
+  View free plan:
+    heroku addons
+  See created env variable:
+    heroku config
+  See details of database connection:
+    heroku pg:credentials:url
+  Connect to host URI (all roles and dbs on heroku):
+    psql <connection-uri>
+  Connect directly to your db uri:
+    heroku pg:psql
+  Connect in DBeaver:
+    FATAL: password authentication failed for user "pyqxazajiadvqd"
+
+
 
 
 
