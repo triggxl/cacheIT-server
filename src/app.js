@@ -40,3 +40,4 @@ module.exports = app;
 // exporting app for integration testing
 // initialized the dotenv as well as added the basic middleware 
 // Morgan is set to be less verbose when in production
+

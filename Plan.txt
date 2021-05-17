@@ -1,0 +1,28 @@
+created simple migration and seed file-
+•not sure how to get that information in psql to test out on heroku
+  A:
+    First we need to seed are database locally
+    Add table:
+    1.) psql -U Triggxl -d test_heroku -f /migrations/001.do.create-test-data.sql
+    View DB:
+    2.) psql test_heroku
+    3.) \d --> view table/values in GUI
+      <database-name>
+        Schemas
+          public 
+            Tables
+              <table-name>
+                click on 'Data' tab
+
+•trying to find my db name to add to DATABASE_URL in config
+  A: https://chartio.com/resources/tutorials/how-to-list-databases-and-tables-in-postgresql-using-psql/
+
+•how to view data on GUI (ex: DBeaver)
+  + New Datbase
+  Fields:
+    Database: <database-name>
+    PORT: 5432
+
+
+
+
